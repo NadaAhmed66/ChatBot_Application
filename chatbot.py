@@ -4,7 +4,7 @@ import streamlit as st
 
 api="AIzaSyBlhInmMsi5e8XmaTizYMFzuErRswZ8kuo"
 
-
+st.title("ChatBot Application")
 if api:
     genai.configure(api_key=api)
 else:
@@ -36,3 +36,4 @@ if user_input:=st.chat_input("please enter ....."):
             message_placeholder.markdown(f'{reponse_text}')
 
     st.session_state.messages.append({'role':'assistant','content':reponse_text})
+
